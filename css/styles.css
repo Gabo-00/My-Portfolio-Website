@@ -21,14 +21,14 @@ html {
  
     position: relative;
 } */
-section {
+.section1 {
   position: relative;
   width: 100%;
   /* height: 95vh; */
   overflow: hidden; /* Ensure no overflow is visible */
 }
 
-section::before {
+.section1::before {
   content: "";
   position: absolute;
   top: 0;
@@ -45,46 +45,92 @@ section::before {
 
 /*---Func Nav------*/
 .sidebar {
-  height: 0%;
-  width: 0;
+  height: 100%;
+  width: 100%;
+  margin-left: -100%;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
-  background-color: #ffffff;
+  background-image: url(../images/bg2.png);
   overflow-x: hidden;
   transition: 0.8s;
   padding-top: 60px;
-  border-bottom-right-radius: 5%;
+  text-align: center;
+
+}
+.sidebarLink{
+  margin-top: 5%;
+  width: 50%;
+  display: inline-block;
+}
+.sidebarLink ul li a{
+ margin-bottom: 18%;
 }
 .sidebar a {
-  padding: 8px 8px 8px 32px;
+  /* padding: 8px 8px 8px 32px; */
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10%;
+  font-family: 'Rubik',sans-serif;
   display: block;
   transition: 0.3s;
   text-align: center;
+  color: #030c56;
+ 
+  margin-right: 10%;
 }
 .sidebar a:hover {
-  color: #f1f1f1f1;
+  color: #fb6f23;
+}
+.sideBarResume{
+  /* width: 120px; */
+  /* height: 40px; */
+  padding-top: 10px;
+  padding-bottom:10px;
+  color: #000000;
+  font-family:'Roboto';
+  font-weight: bold;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+ background: linear-gradient(yellow,orange);
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5%;
 }
 .sidebarBottomCont {
-  /* display: flex; */
+ text-align: center;
+margin-top: 25%;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
 }
-/* .sidebarName{
-    
-} */
+
+.sideBarName p:nth-child(1),.sidebarFollow p:nth-child(1){
+    font-weight: bold;
+   font-size: 17px;
+   font-family: 'Roboto', sans-serif;
+   color: #030c56;
+}
+.sideBarName p:nth-child(2){
+  font-size: 12px;
+ font-family: 'Roboto', sans-serif;
+ color: #030c56;
+}
 .sidebarFollow {
-  /* float: right; */
-  /* display: flex; */
+ display: inline-block;
   position: inherit;
+
 }
 .sidebar .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
+  font-size: 25px;
   margin-left: 50px;
 }
 .openbtn {
@@ -132,7 +178,7 @@ nav ul li a {
   font-weight: bold;
   color: #fb6f23;
 }
-nav {
+#navigation {
   /* margin-top: 20px; */
   /* margin: 40px 15% 0 15%; */
   /* margin-left: 5%; */
@@ -171,10 +217,10 @@ nav ul {
   flex-direction: row;
   /* margin-top: 5%; */
   justify-content: space-around;
-  padding:6%;
+ padding: 5% 10% 0 10%;
 }
 .text-container p:nth-child(1) {
-  font-family: 'calibri';
+  font-family: Rubik, sans-serif;
   /* font-weight: bold; */
   color: #030c56;
   font-size: 30px;
@@ -215,7 +261,7 @@ nav ul {
 
 }
 /* .text-container p {
-  line-height: 5%;
+  margin-top: 5px;
 
 } */
 /* .text-container {
@@ -236,8 +282,8 @@ nav ul {
   outline: none;
   box-shadow: 2px 2px  15px rgba(0, 0, 0, 0.2);
   border: none;
-  margin: 0px 10px; 
-  
+  margin: 15px 10px; 
+  cursor: pointer;
 }
 
 /* .down-cv {
@@ -279,7 +325,7 @@ button:hover {
   border-radius: 20px;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
   display: flex;
-  margin: 8% auto 20px auto;
+  margin: 10% auto 20px auto;
   padding-top: 10px;
   padding-bottom: 10px;
   justify-content: space-evenly;
@@ -335,7 +381,7 @@ button:hover {
   /* letter-spacing: 1px; */
   word-spacing: 5px;
 }
-.about-text button {
+/* .about-text button {
   width: 120px;
   height: 40px;
   color: #000000;
@@ -346,12 +392,34 @@ button:hover {
   background-color: #bd2d2d;
   display: inline-block;
   cursor: pointer;
-}
-.about-text button:hover {
+} */
+/* .about-text button:hover {
   transform: scale(1.1);
   transition: all 0.3s ease;
   color: rgb(6, 6, 6);
   background-color: rgb(117, 85, 206);
+} */
+.resume{
+  width: 120px;
+  /* height: 40px; */
+  padding-top: 10px;
+  padding-bottom:10px;
+  color: #000000;
+  font-family:'Roboto';
+  font-weight: bold;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+ background: linear-gradient(yellow,orange);
+  display: inline-block;
+  cursor: pointer;
+}
+.resume:hover{
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+ 
 }
 .revealAbout {
   position: relative;
@@ -395,6 +463,7 @@ button:hover {
   font-family: 'Roboto', sans-serif;
   text-align: end;
   padding-right: 5%;
+  color: #030c56;
 }
 .leftCont p:nth-child(7),
 .leftCont p:nth-child(4) {
@@ -447,16 +516,19 @@ border-bottom-right-radius: 15px;
   font-size: 15px;
   letter-spacing: 1px;
 }
+.rightCont p:nth-child(1){
+  color: #030c56;
+}
 .rightCont p:nth-child(1),
 .rightCont p:nth-child(4),
 .rightCont p:nth-child(7) {
  
   font-weight: bold;
 }
-/* .education p:nth-child(3),
-.education p:nth-child(5) {
-  font-size: 20px;
-} */
+.vCert{
+  font-weight: lighter;
+  
+}
 .reveal {
   position: relative;
   transform: translateY(150px);
@@ -480,6 +552,7 @@ border-bottom-right-radius: 15px;
   font-size: 25px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
+  color: #030c56;
 }
 .techHeader p:nth-child(2) {
   font-size: 16px;
@@ -550,6 +623,7 @@ border-bottom-right-radius: 15px;
 .projectHeader p:nth-child(1){
   font-size: 25px;
   font-weight: bold;
+  color: #030c56;
 }
 .works{
    display: flex;
@@ -650,6 +724,7 @@ transition: .8s ease;
   height: 50px;
   padding: 0px;
   margin: 0px;
+  color: #000;
   line-height: 0px;
   background-color: #ffffff;
   border: 1px solid#cbcbcb;
@@ -673,7 +748,7 @@ footer {
   display: flex;
 }
 .main-content .box {
-  flex-basis: 50%;
+  flex-basis: 70%;
   padding: 10px 20px;
 }
 .box h2 {
