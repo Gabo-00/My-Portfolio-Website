@@ -237,6 +237,7 @@ nav ul {
   box-shadow: 2px 2px  15px rgba(0, 0, 0, 0.2);
   border: none;
   margin: 0px 10px; 
+  
 }
 
 /* .down-cv {
@@ -278,7 +279,7 @@ button:hover {
   border-radius: 20px;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
   display: flex;
-  margin: 5% auto 20px auto;
+  margin: 8% auto 20px auto;
   padding-top: 10px;
   padding-bottom: 10px;
   justify-content: space-evenly;
