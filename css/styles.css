@@ -129,7 +129,7 @@ justify-content: space-around;
 .sidebar .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
+  right: -5%;
   font-size: 25px;
   margin-left: 50px;
 }
@@ -304,6 +304,27 @@ button:hover {
   transition: all 0.3s ease;
  color: #000;
   background-color: rgb(247, 9, 9);
+}
+.frontSocial{
+  display: flex;
+  flex-direction: row;
+justify-content: right 5%;
+}
+.frontSocial a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  margin-top: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+  color: #000;
+  line-height: 0px;
+
+  border: orange 2px solid;
+
 }
 .model img {
   height: 500px;
@@ -712,12 +733,13 @@ transition: .8s ease;
 
 .a-social-b {
   position: fixed;
-  top: 50%;
+  top: 80%;
   right: 0px;
-  transform: translateX(-50%);
+  transform: translateX(-55%);
 }
 .a-social-b a {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 50px;
@@ -726,9 +748,11 @@ transition: .8s ease;
   margin: 0px;
   color: #000;
   line-height: 0px;
+  border-radius: 50%;
   background-color: #ffffff;
-  border: 1px solid#cbcbcb;
+  border: 1px solid orange;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 5px;
 }
 /*-----d codes--*/
 
