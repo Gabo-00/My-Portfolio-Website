@@ -7,14 +7,11 @@ window.addEventListener('scroll', function(){
     }
 })
 function openNav() {
-    document.getElementById("mySidebar").style.width = "100%";
-    document.getElementById("mySidebar").style.height = "100%";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("mySidebar").style.marginLeft = "0%";
+    // document.getElementById("main").style.marginLeft = "250px";
 }
 function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("mySidebar").style.height = "0%";
-    document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("mySidebar").style.marginLeft = "-100%";
 }
 
 
@@ -80,3 +77,48 @@ function closeNav() {
   
 
 //    }
+function downloadResume() {
+   
+    var url = '../Resume/Adrian_JosephLauresta_CV.pdf';
+    var filename = 'Adrian_Joseph_Lauresta-Cv.pdf'; 
+
+    var link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    // Clean up
+    document.body.removeChild(link);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+  
+    window.addEventListener("scroll", function() {
+      let current = "";
+  
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 50;
+        const sectionId = section.getAttribute("id");
+  
+        if (window.scrollY >= sectionTop) {
+          current = sectionId;
+        }
+      });
+  
+      navLinks.forEach(link => {
+        const href = link.getAttribute("href").substring(1);
+  
+        if (href === current) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+  });
+  
